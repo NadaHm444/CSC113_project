@@ -50,10 +50,11 @@ public class TestJewelryStore {
             System.out.println("----------Find order----------");
             System.out.println("Enter order id:");
                String OrderId=input.next();
-        Order foundOrder=OurStore.searchOrder(OrderId);
+        Order foundOrder=Order OurStore.searchOrder(OrderId);
 		       if(foundOrder != null)
-			 System.out.println("      
-		       
+			 System.out.println("Your order is availble");
+		       else 
+		         System.out.println("Your order is not availble");
                break;
          
             case 3:
