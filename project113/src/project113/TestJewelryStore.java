@@ -24,7 +24,6 @@ public class TestJewelryStore {
        switch(ch){
               case 1:
                System.out.println("----------Add order----------");
-               System.out.println("your choice is : 1");
                System.out.println("Enter customer name:");
                String CustomerName=input.next();
                System.out.println("Enter customer password:");
