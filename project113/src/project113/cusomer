@@ -11,7 +11,7 @@ customerprice=pr;
 }
 
 public String toString(){
-return "customerName:"+customerName+"customerPassword:"+customerPassword+"customerprice:"+customerprice;
+return "customerName:"+customerName+"customerPassword:"+customerPassword+"Non-discount price:"+customerprice;
 
 }
 
