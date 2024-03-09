@@ -8,13 +8,17 @@ public class TestJewelryStore {
     
 		JewelryStore OurStore= new JewelryStore("Cartier",100);
 		
-             int ch=0;
+             int ch;
 		do{
-             system.out.println("**********Cartier store**********");
-             system.out.println("welcome to Cartier store service , what do you need today?");
-
-
-		}while(ch!=5);
+             System.out.println("**********Cartier store**********");
+             System.out.println("welcome to Cartier store customer service , what do you need today?(Enter your menu option)");
+             System.out.println("1. Add order for one customer");
+             System.out.println("2. Find a customer order");
+	    System.out.println("3. Delete a customer order");
+	     System.out.println("4. Display a customer order");
+	     System.out.println("5. Display today's orderes");
+	     System.out.println("6. Exit");
+		}while(ch!=6);
     
 		
 		
