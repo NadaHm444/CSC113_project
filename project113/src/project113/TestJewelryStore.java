@@ -18,6 +18,7 @@ public class TestJewelryStore {
 	     System.out.println("4. Display a customer order");
 	     System.out.println("5. Display today's orderes");
 	     System.out.println("6. Exit");
+	     System.out.println(" Enter your choice is:");
              ch= input.nextInt();
        switch(ch){
                Case 1:
