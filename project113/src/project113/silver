@@ -1,0 +1,19 @@
+public  class Silver extends Customer{
+private char typeClass;
+
+public Silver(String name,String password,double price, char S){
+super(name,password,price);
+typeClass=S;
+}
+
+
+public double calculateDiscount(double price){//
+return price*(15/100);
+}
+
+
+public String toString(){
+return super.toString()+"typeClass:"+typeClass;
+
+}
+}
