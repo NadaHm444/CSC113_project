@@ -20,12 +20,17 @@ public class TestJewelryStore {
 	     System.out.println("6. Exit");
 	     System.out.println(" Enter your choice is:");
              ch= input.nextInt();
+	      System.out.println("your choice is : "+ch);
        switch(ch){
                Case 1:
 	        System.out.println("----------Add order----------");
-	       System.out.println("your choice is : 1");
-	       System.out.println("Enter : customer name, customer id, jewelry price and order id. ");
+	       System.out.println("Enter : customer name, customer password, jewelry price and order id. ");
 		String CustomerName=inut.next();
+		String CustomerPassword=input.next(); 
+		double JewleryPrice=input.nextDouble();
+		String OrderId=input.next();
+                       if(JewleryPrice
+		
 	        
 
 	       break;
