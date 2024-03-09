@@ -23,7 +23,7 @@ public class Order {
 		return finalPrice;
 	}
 	public String toString() {
-		return 	"===============\nOrder Id: "+orderId+"\n----------By customer:\n"+customer.toString()+"\n----------\nNon-discount price"+customer.calculateDiscount()+"\nTotal Price after discounting: "+calculatePrice()+"===============\\n";
+		return 	"===============\nOrder Id: "+orderId+"\n----------By customer:\n"+customer.toString()+"\nTotal Price after discounting: "+customer.calculateDiscount()+"===============\\n";
 	}
 	public String getOrderId() {
 		return orderId;
