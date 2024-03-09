@@ -22,13 +22,17 @@ public class TestJewelryStore {
              ch= input.nextInt();
 	      System.out.println("your choice is : "+ch);
        switch(ch){
-               Case 1:
-	        System.out.println("----------Add order----------");
-	       System.out.println("Enter : customer name, customer password, jewelry price and order id. ");
-		String CustomerName=inut.next();
-		String CustomerPassword=input.next(); 
-		double JewleryPrice=input.nextDouble();
-		String OrderId=input.next();
+              case 1:
+               System.out.println("----------Add order----------");
+               System.out.println("your choice is : 1");
+               System.out.println("Enter customer name:");
+               String CustomerName=input.next();
+               System.out.println("Enter customer password:");
+               String CustomerPassword=input.next();  
+               System.out.println("Enter jewelry price :");
+               double JewleryPrice=input.nextDouble();
+               System.out.println("Enter order id:");
+               String OrderId=input.next();
                        if(JewleryPrice >25000){
 			     Customer customerG=new Golden(CustomerName,CustomerPassword,JewleryPrice);
 			     Order ord=new Order(OrderId,customerG);
