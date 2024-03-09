@@ -6,7 +6,7 @@ public class TestJewelryStore {
 
 		Scanner input=new Scanner(System.in);
     
-		JewelryStore Store
+		JewelryStore Store h
     
 		
 		
