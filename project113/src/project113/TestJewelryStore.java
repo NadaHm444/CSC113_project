@@ -10,8 +10,9 @@ public class TestJewelryStore {
 		
              int ch=0;
 		do{
-              System.out.println("**********Hello customer service**********");
-              System.out.println("welcome to Cartire Store");
+             system.out.println("**********Carter store**********");
+             system.out.println("welcome to Carter store service , what do you need today?");
+
 
 		}while(ch!=5);
     
