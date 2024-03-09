@@ -47,8 +47,13 @@ public class TestJewelryStore {
      
                break;
             case 2:
-            
-            
+            System.out.println("----------Find order----------");
+            System.out.println("Enter order id:");
+               String OrderId=input.next();
+        Order foundOrder=OurStore.searchOrder(OrderId);
+		       if(foundOrder != null)
+			 System.out.println("      
+		       
                break;
          
             case 3:
