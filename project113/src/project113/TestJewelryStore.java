@@ -29,9 +29,14 @@ public class TestJewelryStore {
 		String CustomerPassword=input.next(); 
 		double JewleryPrice=input.nextDouble();
 		String OrderId=input.next();
-                       if(JewleryPrice
+                       if(JewleryPrice >25000){
+			       Customer customerG=new Golden(CustomerName,CustomerPassword,JewleryPrice);
+			Order ord=new Order(OrderId,customerG);  }
+		       else if(JewleryPrice<25000){
+			      Customer customerS=new Silver(CustomerName,CustomerPassword,JewleryPrice); 
+		       Order ord=new Order(OrderId,customerS);}
 		
-	        
+	        OurStore.addOrder(ord);}
 
 	       break;
 
