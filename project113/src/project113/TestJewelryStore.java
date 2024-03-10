@@ -1,5 +1,3 @@
-package project113;
-
 import java.util.Scanner;
 public class TestJewelryStore {
 public static void main(String[] args) {
@@ -18,7 +16,7 @@ public static void main(String[] args) {
          System.out.println("4. Display a customer order");
          System.out.println("5. Display today's orderes");
          System.out.println("6. Exit");
-         System.out.println(" Enter your choice is:");
+  
          ch= input.nextInt();
          
           System.out.println("your choice is : "+ ch);
@@ -27,29 +25,30 @@ public static void main(String[] args) {
                System.out.println("----------Add order----------");
                System.out.println("Enter customer name:");
                String CustomerName=input.next();
-               System.out.println("Enter customer password:");
-               String CustomerPassword=input.next();  
+               System.out.println("Enter customer id:");
+               String CustomerId=input.next();  
                System.out.println("Enter jewelry price :");
                double JewleryPrice=input.nextDouble();
-               System.out.println("Enter order id:");
-               String OrderId=input.next();
+               System.out.println("Enter order code:");
+               String OrderCode=input.next();
+               
               if(JewleryPrice >=25000){
-			     Customer customerG=new Golden(CustomerName,CustomerPassword,JewleryPrice);
-			     Order ord=new Order(OrderId,customerG);
+			     Customer customerG=new Golden(CustomerName,CustomerId,JewleryPrice);
+			     Order ord=new Order(OrderCode,customerG);
                OurStore.addOrder(ord);  }
 		        else 
               if(JewleryPrice<25000){
-			     Customer customerS=new Silver(CustomerName,CustomerPassword,JewleryPrice); 
-		        Order ord=new Order(OrderId,customerS);
+			     Customer customerS=new Silver(CustomerName,CustomerId,JewleryPrice); 
+		        Order ord=new Order(OrderCode,customerS);
 	           OurStore.addOrder(ord);}
                break;
                
                
             case 2:
              System.out.println("----------Find order----------");
-             System.out.println("Enter order id first to find:");
-             OrderId=input.next();
-             Order foundOrder=OurStore.searchOrder(OrderId);// copy constructer?!
+             System.out.println("Enter order code first to find:");
+             OrderCode=input.next();
+             Order foundOrder=OurStore.searchOrder(OrderCode);// copy constructer?!
 		       if(foundOrder != null)
            System.out.println(" Your order is available");
            else
@@ -59,9 +58,9 @@ public static void main(String[] args) {
     
             case 3:
               System.out.println("----------Delete order----------");
-              System.out.println("Enter order id first to delete :");
-              OrderId=input.next();
-              if(OurStore.deleteOrder(OrderId)==true)
+              System.out.println("Enter order code first to delete :");
+              OrderCode=input.next();
+              if(OurStore.deleteOrder(OrderCode)==true)
 		        System.out.println("The deletion was completed successfully");
 		        else 
               System.out.println("Cannot delete order with this invalid id");
@@ -70,9 +69,9 @@ public static void main(String[] args) {
          
             case 4:
             System.out.println("----------Display order----------");
-            System.out.println("Enter order id first to Display :");
-             OrderId=input.next();
-             foundOrder=OurStore.searchOrder(OrderId);// copy constructer?!
+            System.out.println("Enter order code first to Display :");
+             OrderCode=input.next();
+             foundOrder=OurStore.searchOrder(OrderCode);// copy constructer?!
 		       if(foundOrder != null)
             System.out.println("Display all info:\n"+foundOrder.toString());
            else
@@ -87,7 +86,8 @@ public static void main(String[] args) {
             case 6:
             System.out.println("**********Goodbye**********");
                break;
-      default:
+               
+            default:
          System.out.println("invalid choice enter from 1-6 :");
          }
       
