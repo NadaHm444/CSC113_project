@@ -58,24 +58,25 @@ public class TestJewelryStore {
                break;
          
             case 3:
-             System.out.println("----------Delet order----------");
-            System.out.println("Enter order id:");
-               String OrderId=input.next();
-              if(OurStore.deletOrder(OrderId)==true)
+             System.out.println("----------Delete order----------");
+            System.out.println("Enter order id first to delete:");
+                OrderId=input.next();
+              if(OurStore.deleteOrder(OrderId)==true)
 		   System.out.println("The deletion was completed successfully");
 		       else System.out.println("Cannot delet order with this invalid id")
 	       break;
 
-		Case 2:
-
-
-		break;
-                Case 3:
-
-	       break;
-
 		Case 4:
+                System.out.println("----------Display order----------");
+            System.out.println("Enter order id first to display:");
+                OrderId=input.next();
 
+	       foundOrder=Order OurStore.searchOrder(OrderId);
+		       if(foundOrder != null)
+			 System.out.println(foundOrder.toString);
+		       else 
+		         System.out.println("Your order is not available");
+		       
 
 		break;
                  Case 5:
