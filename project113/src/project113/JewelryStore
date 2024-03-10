@@ -1,8 +1,6 @@
-package it113project;
-
 public class JewelryStore {
   private String StoreName;
-  public Order[]ListOrders;
+  private Order[]ListOrders;
   private int numOfOrders;
   
   public JewelryStore( String StoreName,int size) {
@@ -16,9 +14,9 @@ public class JewelryStore {
 		  return true;}
 	  else  return false;
   }
-  public boolean deleteOrder(String orderId) {
+  public boolean deleteOrder(String orderCode) {
 	  for(int i=0;i<numOfOrders;i++)
-		  if(ListOrders[i].getOrderId().equals(orderId)) {
+		  if(ListOrders[i].getOrderCode().equals(orderCode)) {
 			  ListOrders[i]=ListOrders[numOfOrders-1];
 	  
 	  numOfOrders--;
@@ -27,9 +25,9 @@ public class JewelryStore {
 	  
 	  return false;
   }
-  public Order searchOrder(String orderId) {
+  public Order searchOrder(String orderCode) {
 	  for(int i=0;i<numOfOrders;i++)
-		  if(ListOrders[i].getOrderId().equals(orderId)){
+		  if(ListOrders[i].getOrderCode().equals(orderCode)){
 			  return ListOrders[i]; }
 			  
 			return null;  
@@ -41,7 +39,5 @@ str+="Store name: "+StoreName+"\nNumber of orders: "+numOfOrders+"\nAll info ord
 for(int i=0;i<numOfOrders;i++)
 str+=ListOrders[i].toString()+"\n";
 
-System.out.println(str);
-}
-  
-}
+System.out.println(str);  
+}}
