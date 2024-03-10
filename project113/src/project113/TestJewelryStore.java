@@ -73,7 +73,8 @@ public class TestJewelryStore {
 
 	       foundOrder=Order OurStore.searchOrder(OrderId);
 		       if(foundOrder != null)
-			 System.out.println(foundOrder.toString);
+			  System.out.println("Display all info:"+foundOrder.toString());
+
 		       else 
 		         System.out.println("Your order is not available");
 		       
