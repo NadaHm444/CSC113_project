@@ -81,10 +81,13 @@ public class TestJewelryStore {
 
 		break;
                  Case 5:
+System.out.println("----------Display today's orderes----------");
+              OurStore.display();
 
 	       break;
 
 		Case 6:
+System.out.println("****Goodbye****");
 
 
 		break;
