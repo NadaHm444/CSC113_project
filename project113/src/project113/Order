@@ -1,32 +1,26 @@
-package it113project;
-
 public class Order {
-	private String orderId;
+	private String orderCode;
 	private Customer customer;
 	
 	
-	public Order(String orderId ,Customer customer ) {
-		this.orderId=orderId;
-		setCoustomer(customer);
+	public Order(String orderCode ,Customer customer ) {
+		this.orderCode=orderCode;
+		setCustomer(customer);
 	}
 	
 	public void setCustomer( Customer customer) {
 		this.customer=customer;
 	}
     
-	public Customer getCustomer() {
-		
-		return customer;
-	}
 	public double calculatePrice() {		
-		finalPrice=customer.calculateDiscount();
+		double finalPrice=customer.calculateDiscount();
 		return finalPrice;
 	}
 	public String toString() {
-		return 	"===============\nOrder Id: "+orderId+"\n----------By customer:\n"+customer.toString()+"\nTotal Price after discounting: "+customer.calculateDiscount()+"===============\\n";
-	}
-	public String getOrderId() {
-		return orderId;
+  return 	"===============\n Order Code: "+orderCode+"\n----------By customer:\n"+customer.toString()+"\nTotal Price after discounting: "+calculatePrice()+"\n===============";	}
+  
+   	public String getOrderCode() {
+		return orderCode;
 	}
 	
 }
