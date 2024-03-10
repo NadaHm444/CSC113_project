@@ -32,7 +32,7 @@ public class TestJewelryStore {
                double JewleryPrice=input.nextDouble();
                System.out.println("Enter order id:");
                String OrderId=input.next();
-                       if(JewleryPrice >25000){
+                       if(JewleryPrice >=25000){
 			     Customer customerG=new Golden(CustomerName,CustomerPassword,JewleryPrice);
 			     Order ord=new Order(OrderId,customerG);
                OurStore.addOrder(ord);  }
