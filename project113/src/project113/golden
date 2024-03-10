@@ -1,17 +1,17 @@
 public  class Golden extends Customer{
 private char typeClass;
 
-public Golden(String name,String password,double price,char G){//
-super(name,password,price);
-typeClass=G;
+public Golden(String name,String id,double price){//
+super(name,id,price);
+typeClass='G';
 }
 
-public double calculateDiscount(double price){
-return price*(30/100);
+public double calculateDiscount(){
+return(customerPrice- ((customerPrice*30)/100));
 }
 
 public String toString(){
-return super.toString()+"typeClass:"+typeClass;
+return super.toString()+"\ntypeClass:"+typeClass;
 
 }
 }
