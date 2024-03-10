@@ -1,20 +1,19 @@
 public abstract class Customer{// abstract class
 
 protected String customerName;
-protected String customerPassword;
-protected double customerprice;//
+protected String customerId;
+protected double customerPrice;//the jewelry price
 
-public Customer(String n,String p,double pr){//
+public Customer(String n,String id,double pr){//
 customerName=n;
-customerPassword=p;
-customerprice=pr;
+customerId=id;
+customerPrice=pr;
 }
+
+public abstract double calculateDiscount();// abstract method 
 
 public String toString(){
-return "customerName:"+customerName+"customerPassword:"+customerPassword+"Non-discount price:"+customerprice;
+return "Customer Name:"+customerName+"\nCustomer Id:"+customerId+"\nNon-discount price:"+customerPrice;}
 
-}
-
-public abstract double calculateDiscount(double price);// abstract method 
 
 }
