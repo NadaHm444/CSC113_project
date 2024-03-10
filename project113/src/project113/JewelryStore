@@ -36,7 +36,7 @@ public class JewelryStore {
   }
   public void display(){
 String str="";
-str+="Store name: "+StoreName+"\nNumber of orders: "+numOfOrders+"\n";
+str+="Store name: "+StoreName+"\nNumber of orders: "+numOfOrders+"\nAll info orders:\n";
 
 for(int i=0;i<numOfOrders;i++)
 str+=ListOrders[i].toString()+"\n";
