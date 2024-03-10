@@ -52,14 +52,18 @@ public class TestJewelryStore {
                String OrderId=input.next();
         Order foundOrder=Order OurStore.searchOrder(OrderId);
 		       if(foundOrder != null)
-			 System.out.println("Your order is availble");
+			 System.out.println("Your order is available");
 		       else 
-		         System.out.println("Your order is not availble");
+		         System.out.println("Your order is not available");
                break;
          
             case 3:
-
-
+             System.out.println("----------Delet order----------");
+            System.out.println("Enter order id:");
+               String OrderId=input.next();
+              if(OurStore.deletOrder(OrderId)==true)
+		   System.out.println("The deletion was completed successfully");
+		       else System.out.println("Cannot delet order with this invalid id")
 	       break;
 
 		Case 2:
