@@ -1,17 +1,18 @@
 public  class Golden extends Customer{
-private char typeClass;
+private char typeClass;//the type based on customer classification
 
-public Golden(String name,String id,double price){//
-super(name,id,price);
-typeClass='G';
+public Golden(String name,String id){//constructor to initialize the attributes with the received parameters
+
+super(name,id);
+typeClass='G';//type of Golden Class
 }
 
-public double calculateDiscount(){
-return(customerPrice- ((customerPrice*30)/100));
+public double calculateDiscount(double price){//a method to discounting the received price by -30% then it returns the discounted price
+return(price- ((price*30)/100));
 }
 
 public String toString(){
-return super.toString()+"\ntypeClass:"+typeClass;
+return super.toString()+"\nType Class:"+typeClass;
 
 }
 }
