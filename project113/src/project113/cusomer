@@ -1,19 +1,17 @@
-public abstract class Customer{// abstract class
+public abstract class Customer{// abstract class by method calculateDiscount
 
 protected String customerName;
 protected String customerId;
-protected double customerPrice;//the jewelry price
 
-public Customer(String n,String id,double pr){//
+public Customer(String n,String id){//constructor to initialize the attributes with the received parameters
 customerName=n;
 customerId=id;
-customerPrice=pr;
 }
 
-public abstract double calculateDiscount();// abstract method 
+public abstract double calculateDiscount(double price);// abstract method it returns the calculated price after discount 
 
 public String toString(){
-return "Customer Name:"+customerName+"\nCustomer Id:"+customerId+"\nNon-discount price:"+customerPrice;}
+return "Customer Name:"+customerName+"\nCustomer Id:"+customerId; }
 
 
 }
