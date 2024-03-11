@@ -1,23 +1,24 @@
 public class Order {
 	private String orderCode;
+   private double price;//the jewelry price
 	private Customer customer;
 	
-	
-	public Order(String orderCode ,Customer customer ) {
+	public Order(String orderCode ,double price,Customer customer ) {//constructor to initialize the attributes with the received parameters
 		this.orderCode=orderCode;
-		setCustomer(customer);
+      this.price=price;
+		setCustomer(customer);//initialize the customer object by using setCustomer method
 	}
 	
 	public void setCustomer( Customer customer) {
 		this.customer=customer;
 	}
     
-	public double calculatePrice() {		
-		double finalPrice=customer.calculateDiscount();
+	public double calculatePrice() {	//it returns the discounted price based on the calculateDiscount method that in customer object
+		double finalPrice=customer.calculateDiscount(price);//calling an abstract method where the compiler knows where to go based on the actual type of customer object
 		return finalPrice;
 	}
 	public String toString() {
-  return 	"===============\n Order Code: "+orderCode+"\n----------By customer:\n"+customer.toString()+"\nTotal Price after discounting: "+calculatePrice()+"\n===============";	}
+  return 	"===============\n Order Code: "+orderCode+"\nNon-discount price:"+price+"\nTotal Price after discounting: "+calculatePrice()+"\n----------By customer:\n"+customer.toString()+"\n===============";	}
   
    	public String getOrderCode() {
 		return orderCode;
