@@ -1,36 +1,39 @@
 public class JewelryStore {
   private String StoreName;
   private Order[]ListOrders;
-  private int numOfOrders;
+  private int numOfOrders;//count the number of orders
   
-  public JewelryStore( String StoreName,int size) {
+  public JewelryStore( String StoreName,int size) {//constructor to initialize the attributes with the received parameters
    this.StoreName=StoreName;
-   ListOrders=new Order[size];
+   ListOrders=new Order[size];//declare an array with size of received size parameter
    numOfOrders=0;
   }
   public boolean addOrder(Order order) {
-	  if(numOfOrders<ListOrders.length) {
-		  ListOrders[numOfOrders++]= order;
-		  return true;}
-	  else  return false;
+	  if(numOfOrders<ListOrders.length) {//making sure there is an empety index
+		  ListOrders[numOfOrders++]= order;//filling that empety index with the received order object
+		  return true;// successful addition
+        }
+	  else  return false;//unsuccessful addition
   }
-  public boolean deleteOrder(String orderCode) {
+  public boolean deleteOrder(String orderCode) {//deleting an one order object if we find the code is equal to the received code  
 	  for(int i=0;i<numOfOrders;i++)
 		  if(ListOrders[i].getOrderCode().equals(orderCode)) {
-			  ListOrders[i]=ListOrders[numOfOrders-1];
+			  ListOrders[i]=ListOrders[numOfOrders-1];//deleting with replace
 	  
 	  numOfOrders--;
 	  ListOrders[numOfOrders]=null;
-	  return true;  }
+	  return true; // successful deletion
+      }
 	  
-	  return false;
+	  return false;//unsuccessful deletion
   }
-  public Order searchOrder(String orderCode) {
-	  for(int i=0;i<numOfOrders;i++)
+  public Order searchOrder(String orderCode) {//it return order object if we find the code order is equal to the received code 
+  	  for(int i=0;i<numOfOrders;i++)
 		  if(ListOrders[i].getOrderCode().equals(orderCode)){
-			  return ListOrders[i]; }
+			  return ListOrders[i];//it found so this index will be return
+            }
 			  
-			return null;  
+			return null;//couldn't find so it return null  
   }
   public void display(){
 String str="";
