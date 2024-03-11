@@ -26,20 +26,20 @@ public static void main(String[] args) {
                System.out.println("Enter customer name:");
                String CustomerName=input.next();
                System.out.println("Enter customer id:");
-               String CustomerId=input.next();  
+               String CustomerId=input.next();
+                System.out.println("Enter order code:");
+               String OrderCode=input.next();  
                System.out.println("Enter jewelry price :");
                double JewleryPrice=input.nextDouble();
-               System.out.println("Enter order code:");
-               String OrderCode=input.next();
-               
+                             
               if(JewleryPrice >=25000){
-			     Customer customerG=new Golden(CustomerName,CustomerId,JewleryPrice);
-			     Order ord=new Order(OrderCode,customerG);
+			     Customer customerG=new Golden(CustomerName,CustomerId);
+			     Order ord=new Order(OrderCode,JewleryPrice,customerG);
                OurStore.addOrder(ord);  }
 		        else 
               if(JewleryPrice<25000){
-			     Customer customerS=new Silver(CustomerName,CustomerId,JewleryPrice); 
-		        Order ord=new Order(OrderCode,customerS);
+			     Customer customerS=new Silver(CustomerName,CustomerId); 
+		        Order ord=new Order(OrderCode,JewleryPrice,customerS);
 	           OurStore.addOrder(ord);}
                break;
                
@@ -48,7 +48,7 @@ public static void main(String[] args) {
              System.out.println("----------Find order----------");
              System.out.println("Enter order code first to find:");
              OrderCode=input.next();
-             Order foundOrder=OurStore.searchOrder(OrderCode);// copy constructer?!
+             Order foundOrder=OurStore.searchOrder(OrderCode);
 		       if(foundOrder != null)
            System.out.println(" Your order is available");
            else
